@@ -18,30 +18,30 @@ window.onload = function(){
 		// Plats för förändring.
 	
 		if(isNaN(number) === false){
-			
+			counter ++;
 			if (number < 0 || number > 100){
 				
 				return [false, number + " är inte innanför intervallet 1-100."];
 			}
 			
 			if (number == secret){
-				counter++;
-				return [true, "Grattis, du gissade rätt!\n Det hemliga talet var "+secret+" och det tog dig "+counter+" gissningar."];
+				
+				return [true, "Grattis, du gissade rätt!\n Det hemliga talet var " + secret + " och det tog dig " + counter + " gissningar."];
 				
 			}
 			
 			if(number < secret){
-				counter++;
+				
 				return [false, "Tyvärr, det hemliga talet är högre än " + number + "! Gissa igen..."];
 				
 			}
 		
 			if(number > secret){
-				counter ++;
+				
 				return [false, "Tyvärr, det hemliga talet är lägre än " + number + "! Gissa igen..."];
 				
 			}
-					
+		
 		}
 		else{
 			return [false, number + " är inte en siffra. Försök igen."];

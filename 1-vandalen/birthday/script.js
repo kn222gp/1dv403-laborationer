@@ -5,12 +5,26 @@ window.onload = function(){
 	
 	var birthday = function(date){
 		
-
-
-			// Din kod här.
-
-
-
+		var nowDate = new Date(); 		// Gör ett nytt datumobjekt.
+		var userDate = new Date(date);	// Spara det inmatade datumet i userDate.
+		var oneDay = (24*60*60*1000);	// Gör om millisekunder till en dag.
+		var oneYear = 365;				// Antal dagar på ett år.
+		
+		userDate.setFullYear(nowDate.getFullYear());	// UserDate får årets år.
+		
+		var bday = Math.ceil(((userDate.getTime() - nowDate.getTime()) / oneDay));	// Deklarerar variablen "bday" till antal dagar kvar tills man fyller år.
+		
+		if (date === "")	// Om det inmatade datumet är tomt.	
+		{
+			throw new Error("Ange ett datum...");
+		}
+		
+		if (bday <= -1)		// Om födelsedagen redan har varit detta året, räkna på nästa år.
+		{
+			return bday + oneYear;
+		}
+		
+		return bday;	// Retunerar skillnaden mellan födelsedagen och dagens datum.
 
 	};
 	// ------------------------------------------------------------------------------
