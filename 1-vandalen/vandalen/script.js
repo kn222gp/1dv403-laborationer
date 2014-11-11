@@ -4,7 +4,7 @@ var makePerson = function(persArr){
 
 /*-----------------------------------Variabler-------------------------------*/
 	
-	var names ="";
+	var names = "";
 	var minAge;
 	var maxAge;
 	var averageAge;
@@ -15,7 +15,7 @@ var makePerson = function(persArr){
 
 /*----------------------------------Namn-------------------------------------*/
 
-	for (var i = 0; i<persArr.length; i++){
+	for (var i = 0; i < persArr.length; i+=1){
 	    nameArray[i] = persArr[i].name;
 	}
 	
@@ -24,23 +24,26 @@ var makePerson = function(persArr){
 	names = names.split(",").join(", ");
 
 
+
 /*----------------------------------Ålder------------------------------------*/
 	
-	for (var i = 0; i<persArr.length; i++){
+	for (var i = 0; i < persArr.length; i+=1){
 	    ageArray[i] = persArr[i].age;
 	}
 	
-	minAge = Math.min().apply(Math, ageArray);
-	maxAge = Math.max().apply(Math, ageArray);
+	minAge = Math.min.apply(Math, ageArray);
+	maxAge = Math.max.apply(Math, ageArray);
 	averageAge = ageArray.reduce(function(a, b) { return a + b });
 	averageAge = averageAge / ageArray.length;
 
 
 /*----------------------------Slut på makePerson ----------------------------*/	
-	result = {minAge: minAge, maxAge: maxAge, averageAge: Math.Round(averageAge), names: names};
+
+	result = {minAge: minAge, maxAge: maxAge, averageAge: Math.round(averageAge), names: names};
 	return result;
 	
 };
+
 
 /*------------------ Resterande kod utanför makePerson-----------------------*/	
 
