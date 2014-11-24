@@ -5,7 +5,7 @@ window.onload = function(){
 	var max = 100;
 	var min = 1;
 	var counter = 0;
-	var secret = Math.floor( Math.random() * (max-min)+1 )+min; // Slumpar ett tal mellan 1 och 100.
+	var secret = Math.floor( Math.random() * (max-min)+min); // Slumpar ett tal mellan 1 och 100.
 	
 	
 	// I denna funktion ska du skriva koden för att hantera "spelet"
@@ -17,9 +17,9 @@ window.onload = function(){
 			
 		// Plats för förändring.
 	
-		if(isNaN(number) === false){
+		if(isNaN(number) === false){ 
 			counter ++;
-			if (number < 0 || number > 100){
+			if (number < 1 || number > 100){
 				
 				return [false, number + " är inte innanför intervallet 1-100."];
 			}

@@ -2,7 +2,7 @@
 
 var makePerson = function(persArr){
 
-/*-----------------------------------Variabler-------------------------------*/
+/*------------------------------Variabler------------------------------------*/
 	
 	var names = "";
 	var minAge;
@@ -41,6 +41,7 @@ var makePerson = function(persArr){
 
 	result = {minAge: minAge, maxAge: maxAge, averageAge: Math.round(averageAge), names: names};
 	return result;
+	
 	
 };
 

@@ -10,7 +10,7 @@ window.onload = function(){
 		var oneDay = (24*60*60*1000);	// Gör om millisekunder till en dag.
 		var oneYear = 365;				// Antal dagar på ett år.
 		
-		userDate.setFullYear(nowDate.getFullYear());	// UserDate får årets år.
+		userDate.setFullYear(nowDate.getFullYear());	// UserDate får årets år.   ////////////////////
 		
 		var bday = Math.ceil(((userDate.getTime() - nowDate.getTime()) / oneDay));	// Deklarerar variablen "bday" till antal dagar kvar tills man fyller år.
 		
