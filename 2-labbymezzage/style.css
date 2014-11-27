@@ -12,6 +12,19 @@ header{
     width:60%;
 }
 
+footer{
+    color:white;
+    font-size:11px;
+    text-align:center;
+    background-color: #de6645;
+    height: 30px;
+    max-width: 60%;
+    border-radius:5px;
+    margin-left:auto;
+    margin-right:auto;
+    clear:both;
+}
+
 
 
 h1, h2, h3{
@@ -33,20 +46,24 @@ form{
     padding: 5px;
 }
 
-section{
+#messageBox{
     float:left;
     margin-left: 10px;
     border-radius: 5px;
-    max-width: 533px;
+    height:270px;
+    width:43%;
+    max-width:43%;
     background-color: #de6645;
     padding:5px;
     margin-top: 5px;
-    color:white;
+    overflow-y:auto;
+    color: black;
 }
 
 #textarea{
     width: 100%;
-    max-width:250px;
+    max-width:100%;
+    height: 270px;
     border-radius: 5px;
     
 }
@@ -55,4 +72,47 @@ input{
     border-radius: 5px;
     padding: 5px;
     
+}
+
+.textBox{
+    margin-top: 5px;
+    background-color:#66BEDE;
+    border-radius: 5px;
+    max-width: 100%;
+    min-height:70px;
+    overflow:auto;
+   /* word-break: break-all;
+    white-space: pre-line; */
+}
+
+.displayText{
+   float:left;
+    font-size:16px;
+    padding: 5px;
+}
+
+.displayTime{
+   float: right;
+    padding: 5px;
+}
+
+.showClockImg{
+    float:right;
+    padding:5px;
+    cursor: pointer;
+}
+
+.showCrossImg{
+    float:right;
+    padding:5px;
+    cursor:pointer;
+    
+}
+
+
+
+#amountOf{
+    font-size:16px;
+    float:right;
+    color: white;
 }
