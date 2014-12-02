@@ -1,0 +1,126 @@
+body{
+    background-image: url("pics/background.jpg");
+    background-color: SkyBlue;
+    background-size:100%;
+}
+
+header{
+    text-align:center;
+    border: 2px solid black;
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:SkyBlue;
+    font-family: 'Indie Flower', cursive;
+    border-radius:5px;
+}
+
+#board{
+    background-color: SkyBlue;
+    border: 2px solid black;
+    width: 100%;
+    max-width:420px;
+    height:350px;
+    max-height: 400px;
+    margin-top: 5px;
+    margin-left:auto;
+    margin-right:auto;
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    border-radius:5px;
+}
+
+#section4x2{
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    border: 2px solid black;
+    float: left;
+    margin-left: 10px;
+    padding: 5px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+#section4x2:hover{
+    background-color: Yellow;
+    
+}
+
+
+#section4x4{
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    border: 2px solid black;
+    float: right;
+    margin-right: 10px;
+    padding: 5px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+#section4x4:hover{
+    background-color: Yellow;
+}
+
+table{
+    margin-top:5px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+
+#result{
+    text-align:center;
+    border: 2px solid black;
+    width: 100%;
+    max-width: 400px;
+    height:100%;
+    max-height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    background-color:SkyBlue;
+    font-family: 'Indie Flower', cursive;
+    border-radius:5px;
+}
+
+#result a:focus{
+    outline: black dotted medium;
+}
+
+#tries{
+    float:left;
+    margin-left:15px;
+}
+
+#pairs{
+    margin-right:-45px;
+}
+
+#reset{
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    border: 2px solid black;
+    padding: 5px;
+    cursor:pointer;
+    border-radius:5px;
+    width: 200px;
+    margin-bottom: 20px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#reset:hover{
+    background-color:yellow;
+}
+
+a:focus { 
+    outline: black dotted medium; 
+}
+a{
+    max-height: 80px;
+    display:block;
+}
+

@@ -86,7 +86,7 @@ input{
 }
 
 .displayText{
-   float:left;
+    float:left;
     font-size:16px;
     padding: 5px;
 }
