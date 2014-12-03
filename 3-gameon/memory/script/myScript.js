@@ -5,7 +5,7 @@ window.onload = function(){
     // Create variables.
     var fourXtwo = document.getElementById("section4x2");
     var fourXfour = document.getElementById("section4x4");
-    var reset = document.getElementById("reset");
+    var reset = document.getElementById("resetaTag");
     var board = document.getElementById("board");
     var rows = 4;
     var cols = 4;
@@ -42,6 +42,7 @@ window.onload = function(){
     
     // Reset.
     reset.addEventListener("click", function(e){
+        e.preventDefault();
         location.reload();
         
         

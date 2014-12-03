@@ -44,7 +44,14 @@ header{
 
 #section4x2:hover{
     background-color: Yellow;
-    
+}
+
+#sec4x2aTag{
+    height:75px;
+}
+
+#sec4x2aTag:focus{
+    outline: black dotted medium; 
 }
 
 
@@ -63,8 +70,16 @@ header{
     background-color: Yellow;
 }
 
+#sec4x4aTag{
+    height:75px;
+}
+
+#sec4x4aTag:focus{
+    outline: black dotted medium; 
+}
+
 table{
-    margin-top:5px;
+    margin-top:2.5px;
     margin-left:auto;
     margin-right:auto;
 }
@@ -86,9 +101,6 @@ table{
     border-radius:5px;
 }
 
-#result a:focus{
-    outline: black dotted medium;
-}
 
 #tries{
     float:left;
@@ -116,11 +128,35 @@ table{
     background-color:yellow;
 }
 
-a:focus { 
+#resetaTag{
+    width:214px;
+    margin-left:91px;
+}
+
+#resetaTag:focus{
     outline: black dotted medium; 
 }
+
+
+td{
+    border: 1px solid black;
+}
+
+td a:focus { 
+    outline: black dotted medium; 
+    display:block;
+}
+
 a{
+    text-decoration:none;
     max-height: 80px;
     display:block;
 }
 
+a:visited{
+    color:black;
+}
+
+a h2{
+    float:left;
+}
