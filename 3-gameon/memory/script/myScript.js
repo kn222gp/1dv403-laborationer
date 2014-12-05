@@ -1,5 +1,137 @@
 "use strict";
 
+var game = {
+    
+    // Create variables.
+    fourXtwo:document.getElementById("section4x2"),
+    fourXfour:document.getElementById("section4x4"),
+    reset:document.getElementById("resetaTag"),
+    board:document.getElementById("board"),
+    rows:4,
+    cols:4,
+    flipped:0,
+    counter:0,
+    randomObj:{},
+    imageID:0,
+    pairs:0,
+    maxPairs:8,
+    status:true,
+    firstPicture:null,
+    
+    init: function(){
+        
+    // Menu choices.
+    // Four pairs.
+    game.fourXtwo.addEventListener("click", function(e){
+        e.preventDefault();
+        game.board.innerHTML = "";
+        game.maxPairs = 4;
+        game.cols = 2;
+       
+       game.randomObj = new RandomGenerator.getPictureArray(game.rows, game.cols);
+       game.GameOn();
+    });
+    
+    // Eight pairs.
+    game.fourXfour.addEventListener("click", function(e){
+       e.preventDefault();
+       game.board.innerHTML = "";
+       
+       game.randomObj = new RandomGenerator.getPictureArray(game.rows, game.cols);
+       game.GameOn();
+    });
+    game.reset.addEventListener("click", function(e){
+    });
+    
+    },
+    
+    
+    GameOn: function (){
+        
+        var table = document.createElement('table');
+        
+        for(var i = 0; i < game.rows; i ++){
+            
+            var tRow = document.createElement('tr');
+            table.appendChild(tRow);
+            
+            for(var j = 0; j < game.cols; j++){
+                
+                var tCell = document.createElement('td');
+                var aTag = document.createElement('a');
+                var image = document.createElement('img');
+                
+                aTag.href = "#";
+                
+                image.src ="pics/0.png";
+                image.className = "pics/" + game.randomObj[game.imageID] + ".png";
+                aTag.img = image;
+                
+                game.imageID += 1;
+                aTag.addEventListener("click", game.Click);
+                
+                
+                aTag.appendChild(image);
+                tCell.appendChild(aTag);
+                tRow.appendChild(tCell);
+                
+            }
+            
+            game.board.appendChild(table);
+        }
+        
+    },
+    
+    Click: function(e){
+        e.preventDefault();
+        
+        if(game.status === true){
+            game.flipped++;
+            this.img.src = this.img.className;
+            
+            if(game.flipped === 2){
+                game.counter++;
+                game.flipped = 0;
+                game.status = false;
+                game.firstPicture.addEventListener("click", game.Click);
+                
+                var secondPicture = this;
+                document.getElementById("tries").innerHTML = "Antal försök: " + game.counter;
+                
+                if (game.firstPicture.img.className === secondPicture.img.className){
+                    game.pairs++;
+                    game.firstPicture.removeEventListener("click", game.Click);
+                    secondPicture.removeEventListener("click", game.Click);
+                    document.getElementById("pairs").innerHTML = "Antal par: " + game.pairs + " / " + game.maxPairs;
+                    if(game.pairs === game.maxPairs){
+                        alert("Grattis, du har vunnit! Det tog dig " + game.counter + " försök.");
+                    }
+                    game.status = true;
+                }
+                
+                else{
+                    setTimeout(function() {
+                    game.firstPicture.img.src = "pics/0.png";
+                    secondPicture.img.src = "pics/0.png";
+                    game.status = true;
+                    }, 1000);
+                }
+            }
+            
+            else{
+                game.firstPicture = this;
+                game.firstPicture.removeEventListener("click", game.Click);
+            }
+        }
+    }
+    
+    
+};
+
+window.onload = game.init;
+
+
+/*
 window.onload = function(){
     
     // Create variables.
@@ -39,14 +171,7 @@ window.onload = function(){
        randomObj = new RandomGenerator.getPictureArray(rows, cols);
        GameOn();
     });
-    
-    // Reset.
-    reset.addEventListener("click", function(e){
-        e.preventDefault();
-        location.reload();
-        
-        
-    });
+   
     
     
     // Game function.
@@ -133,4 +258,5 @@ window.onload = function(){
     
     
 };
+*/
 
