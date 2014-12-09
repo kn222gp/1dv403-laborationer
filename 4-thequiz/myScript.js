@@ -45,11 +45,8 @@ var quiz = {
     },
 
     asking: function(url, ans){
-    
-    
-    
     var xhr2 = new XMLHttpRequest();
-    console.log("test");
+    
     
         xhr2.onreadystatechange = function(){
             
@@ -62,18 +59,33 @@ var quiz = {
                     if(message.nextURL !== undefined){
                         quiz.tryArray.push(quiz.tries);
                         quiz.quizGame(message.nextURL);
+                        quiz.error.innerHTML = "";
                         quiz.msg.innerHTML = "Rätt!";
+                        
+                        setTimeout(function() {
+                            quiz.msg.innerHTML = "";
+                        }, 1500);
                     }
+                    
                     else{
-                       
+                        quiz.submit.removeEventListener();
+                        quiz.qSec.innerHTML = "Grattis! Du tog dig igenom quizzet!";
+                        quiz.error.innerHTML = "";
+                        quiz.msg.innerHTML = "";
                         
                     }
                     
                 }
+                
                 else {
                     quiz.tries++;
-                    console.log("NEJ");
-                    quiz.error.innerHTML = "Fel svar, tyvärr!"; 
+                    quiz.msg.innerHTML = "";
+                    quiz.error.innerHTML = "Fel svar, tyvärr!";
+                    
+                    setTimeout(function() {
+                        quiz.error.innerHTML = "";
+                    }, 1500);
+                     
                   
                 }
             }
@@ -83,9 +95,9 @@ var quiz = {
     var json = { answer: ans };
     var jsonString = JSON.stringify(json);
         
-        quiz.xhr.open("POST", url, true);
-        quiz.xhr.setRequestHeader("Content-Type", "application/json");
-        quiz.xhr.send(jsonString);
+        xhr2.open("POST", url, true);
+        xhr2.setRequestHeader("Content-Type", "application/json");
+        xhr2.send(jsonString);
         
     },
     

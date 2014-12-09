@@ -44,3 +44,11 @@ header{
     float:left;
     margin-left:1%;
 }
+
+#error{
+    color:red;
+}
+
+#msg{
+    color:green;
+}
