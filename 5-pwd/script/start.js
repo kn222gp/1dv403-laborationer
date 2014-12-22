@@ -8,8 +8,11 @@ function StartBar(desk){
 StartBar.prototype.newApp = function(name, url){
     var image = document.createElement("img");
     image.src = url;
+    
     var startPosX = 0;
     var startPosY = 0;
+    
+
     
     
     var that = this;
@@ -17,8 +20,10 @@ StartBar.prototype.newApp = function(name, url){
     
     image.onclick = function(e){
         e.preventDefault();
-        var w = new Window(name, that.desk, image);
-        that.startPosition(startPosX += 10, startPosY += 10);
+        startPosX += 10; 
+        startPosY += 10;
+        var w = new Window(name, that.desk, image, startPosX, startPosY);
+        
     };
     
 };

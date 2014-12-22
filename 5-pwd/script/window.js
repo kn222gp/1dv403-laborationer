@@ -1,10 +1,11 @@
 "use strict";
 
-function Window(name, desk, image){
+function Window(name, desk, image, x, y){
+    // this.startPosition(x, y);
     var template = document.querySelector(".template");
     var windowTemplate = template.content.querySelector(".window");
     var w = windowTemplate.cloneNode(true);
-
+    
     
     this.desk = desk;
     this.w = w;
@@ -20,7 +21,7 @@ function Window(name, desk, image){
     };
     windowTitle.innerHTML = name;
     desk.element.appendChild(w);
-   
+    
 }
 
 Window.prototype.close = function(){

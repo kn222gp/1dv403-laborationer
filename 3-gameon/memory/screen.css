@@ -1,0 +1,55 @@
+@media only screen
+{
+
+body
+{
+    max-width: 480px;
+    background-repeat:repeat-y;
+    
+}
+
+header{
+    display:none;
+}
+
+table{
+    margin-left:-7%;
+    -ms-transform: scale(0.8); /* IE 9 */
+    -webkit-transform: scale(0.8); /* Chrome, Safari, Opera */
+    transform: scale(0.8);
+}
+
+#board
+{
+    width: 100%;
+}
+
+#section4x2, #section4x4
+{
+    width: 30%;
+
+}
+#tries{
+    float:left;
+    margin-left:15px;
+}
+
+#pairs{
+    margin-right:-2%;
+}
+
+#result
+{
+    margin-top:5px;
+    -ms-transform: scale(0.5); /* IE 9 */
+    -webkit-transform: scale(0.5); /* Chrome, Safari, Opera */
+    transform: scale(0.5);
+}
+
+#resetaTag
+{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+}
