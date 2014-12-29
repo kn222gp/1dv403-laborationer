@@ -13,12 +13,10 @@ header{
 }
 
 table{
-    margin-left:-7%;
-    -ms-transform: scale(0.8); /* IE 9 */
-    -webkit-transform: scale(0.8); /* Chrome, Safari, Opera */
-    transform: scale(0.8);
-}
-
+    -ms-transform: scale(0.9); /* IE 9 */
+    -webkit-transform: scale(0.9); /* Chrome, Safari, Opera */
+    transform: scale(0.9);
+} 
 #board
 {
     width: 100%;
@@ -40,7 +38,7 @@ table{
 
 #result
 {
-    margin-top:5px;
+    margin-top:-8%;
     -ms-transform: scale(0.5); /* IE 9 */
     -webkit-transform: scale(0.5); /* Chrome, Safari, Opera */
     transform: scale(0.5);

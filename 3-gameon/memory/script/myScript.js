@@ -79,7 +79,7 @@ var game = {
             
             game.board.appendChild(table);
         }
-        
+        console.log(game.randomObj);
     },
     
     Click: function(e){

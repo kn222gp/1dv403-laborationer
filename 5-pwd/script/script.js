@@ -7,3 +7,5 @@ window.onload = function(){
     
     startBar.newApp("Gallery", "pics/galleri.png");
 };
+
+
