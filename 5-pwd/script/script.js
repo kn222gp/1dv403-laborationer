@@ -6,6 +6,7 @@ window.onload = function(){
     var startBar = new StartBar(desk);
     
     startBar.newApp("Gallery", "pics/galleri.png");
+    startBar.newApp("Memory", "pics/memory.png");
 };
 
 

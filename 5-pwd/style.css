@@ -1,20 +1,21 @@
 body{
     background-image:url("pics/background.jpg");
     background-repeat:no-repeat;
-    background-size:100%, 100%;
+    overflow:hidden;
+    
 }
 
 
 /* Window div and all in it */
 .window{
     position:absolute;
-    width: 22%;
-    height: 45%;
+    width: 320px;
+    height: 280px;
 }
 
 .content{
     border:1px solid black;
-    width: 100%;
+    width: 99.8%;
     height: 100%;
     color:white;
     background-color:black;
@@ -22,7 +23,7 @@ body{
     overflow: auto;
     
 /*-----Magic!-----*/
-    display: flex;
+    display: flex; 
     flex-flow: row wrap;
     justify-content: space-around;
 }
@@ -44,7 +45,7 @@ body{
     color:white;
     background-color:black;
     background-color:rgba(0, 0, 0, 0.85);
-    width:100.8%;
+    width:100%;
     height:25px;
     float:left;
     border-bottom:1px solid white;
@@ -61,7 +62,7 @@ body{
     float:left;
     width:20px;
     height:20px;
-    margin-top: -18px;
+    margin-top: -16px;
     margin-left:2px;
 }
 
@@ -69,7 +70,7 @@ body{
     width:20px;
     height:20px;
     float:right;
-    margin-top: -18px
+    margin-top: -16px
 }
 .close:hover{
     background-color:white;
@@ -81,7 +82,7 @@ body{
     background-color:black;
     background-color:rgba(0, 0, 0, 0.85);
     
-    width:100.8%;
+    width:100%;
     height:25px;
     
     border-top: 1px solid white;
@@ -92,12 +93,21 @@ body{
 }
 .windowBot img{
     margin-left: 43%;
-    margin-top: 2%;
+    margin-top: 1.2%;
 }
+
+/* Image viewer window */
+.imageViewerWindow {
+
+    position:absolute;
+
+}
+
 
 
 /* Appbar at the bottom */
 .appbar{
+    text-align:center;
     background-color:black;
     background-color:rgba(0, 0,0 ,0.4);
     height: 50px;
@@ -106,16 +116,17 @@ body{
     margin-right:auto;
     position:absolute;
     bottom:0;
+    z-index:90000;
 }
 .appbar img{
     width:40px;
     height: 40px;
-    margin-left:auto;
-    margin-right:auto;
+    margin-right:3px;
     margin-top:5px;
-    display:block;
+    
 }
 
 .appbar img:hover{
-    transform:scale(1.2, 1.2);
+    transform:translateY(-4px);
+
 }
